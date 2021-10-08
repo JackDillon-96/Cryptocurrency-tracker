@@ -60,8 +60,10 @@ function Home() {
             <img className="coin-image" src={coin.image} />
             <h1 className="coin-name">{coin.name}</h1>
               {coin.price_change_24h > 0 ?
-                (<h1 className="price-increase">£{coin.current_price}</h1>) :
-                (<h1 className="price-decrease">£{coin.current_price}</h1>)
+                (<h1 className="price-increase">£{coin.current_price.toLocaleString(undefined,
+                  {'minimumFractionDigits':2,'maximumFractionDigits':2})}</h1>) :
+                (<h1 className="price-decrease">£{coin.current_price.toLocaleString(undefined,
+                  {'minimumFractionDigits':2,'maximumFractionDigits':2})}</h1>)
               }
             <h1 className="coindata-container">
               <Link className="link" to = {`/home/${coin.id}`}><Button style={{
@@ -79,26 +81,3 @@ function Home() {
 
 export default Home
 
-// import React from 'react'
-// import { Link } from "react-router-dom"
-
-// function Nav() {
-//     return (
-//         <div>
-//             <Link to = "/shop">
-//                 <div>shop</div>
-//             </Link>
-//         </div>
-//     )
-// }
-
-// export default Nav
-
-// useEffect(() => {
-//   const fetchCryptoName = async () => {
-//     const data = await fetch ("https://api.coingecko.com/api/v3/coins/markets?vs_currency=gbp&order=market_cap_desc&per_page=100&page=1&sparkline=false");
-//     const cryptoCurrencyName = await data.json();
-//     setCryptoCurrencyName(cryptoCurrencyName);
-//   }
-//   fetchCryptoName();
-// }, []);

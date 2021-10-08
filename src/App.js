@@ -19,8 +19,3 @@ function App() {
 export default App;
 
 
-{/* <Route path="/shop" exact component={Shop} /> */}
-
-{/* <Switch>
-            <Route path="/shop/:id" component={Shop}/>
-          </Switch> */}
