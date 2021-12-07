@@ -41,15 +41,21 @@ body {
 
 .price-increase {
     color: green;
+    font-size: 1rem;
 }
   
 .price-decrease {
     color: red;
+    font-size: 1rem;
 }
 
 .link {
     text-decoration: none;
-  }
+}
+
+.supply { 
+    font-size: 1rem;;
+}
 
 /* 
   .price-container, .price-change-container, .high-price-container, .low-price-container, .market-cap-container, .year-price-container, .total-supply-container, .circulating-supply-container {

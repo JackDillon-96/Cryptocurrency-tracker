@@ -17,7 +17,7 @@ function CoinData ({ match }) {
       .then((response) => response.json())
       .then((cryptoCurrencyData) => {
         setCryptoCurrencyData(cryptoCurrencyData);
-        console.log(cryptoCurrencyData.name)
+        console.log(match.params.id)
       })
       .catch((err) => {
         console.log(err);
@@ -25,7 +25,7 @@ function CoinData ({ match }) {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [match.params.id]);
 
 
   if (loading) {
@@ -99,7 +99,7 @@ function CoinData ({ match }) {
               <h1 className="text">Total supply</h1>
               <div className="data">
                 {cryptoCurrencyData.market_data.total_supply == null ? 
-                  (<h1>null</h1>) : (<h1>{cryptoCurrencyData.market_data.total_supply.toLocaleString("en-UK")}</h1>)
+                  (<h1 className="supply">null</h1>) : (<h1 className="supply">{cryptoCurrencyData.market_data.total_supply.toLocaleString("en-UK")}</h1>)
                   }
               </div> 
             </div> 
