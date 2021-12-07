@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from "react-router-dom";
+import { AiOutlineHome } from 'react-icons/ai';
+import Button from '@material-ui/core/Button';
 import "./CoinData.css";
 
-function CoinData ({match}) {
+function CoinData ({ match }) {
 
   const [cryptoCurrencyData, setCryptoCurrencyData] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const history = useHistory()
 
   useEffect(() => {
     setLoading(true);
@@ -22,11 +27,21 @@ function CoinData ({match}) {
       });
   }, []);
 
+
   if (loading) {
     return <p>Loading...</p>;
   }
     return (
         <div>
+          <Button onClick={history.goBack}
+            style={{
+                backgroundColor: "#24a0ed",
+                color: "white",
+                fontSize: "18px",
+              }} variant="contained">
+            <AiOutlineHome />
+          </Button>
+
         <div className="title">
             <h1>{cryptoCurrencyData.name}</h1>
         </div>

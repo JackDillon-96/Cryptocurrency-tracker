@@ -29,26 +29,14 @@ body {
 .text {
     font-family: "Be Vietnam Pro";
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.25rem;
 }
 
 .data {
     font-family: "Be Vietnam Pro";
     font-weight: 600;
     text-align: center;
-}
-
-.low-price-container {
-    padding-right: 25px;
-}
-
-.year-price-container {
-    padding-left: -55px;
-}
-
-.total-supply-container {
-    padding-left: 75px;
-    padding-right: 25px;
+    font-size: 1rem;
 }
 
 .price-increase {
@@ -62,3 +50,21 @@ body {
 .link {
     text-decoration: none;
   }
+
+/* 
+  .price-container, .price-change-container, .high-price-container, .low-price-container, .market-cap-container, .year-price-container, .total-supply-container, .circulating-supply-container {
+      width: 33%;
+  } */
+/* 
+.low-price-container {
+    padding-right: 25px;
+}
+
+.year-price-container {
+    padding-left: -55px;
+}
+
+.total-supply-container {
+    padding-left: 75px;
+    padding-right: 25px;
+} */
